@@ -7,6 +7,8 @@
   text-align: center;
   align-content: center;
   justify-content: center;
+  color: #fff;
+
 }
 
 /* Restablecimiento de estilos */
@@ -23,7 +25,7 @@ body {
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
+  color: #ffffff;
 }
 
 h1,
@@ -35,6 +37,9 @@ h6 {
   font-weight: bold;
 }
 
+h2 {
+  font-size: 2.5rem;  
+}
 a {
   text-decoration: none;
   color: #000;
@@ -46,45 +51,150 @@ a:hover {
 
 /* Estilos de la cabecera */
 
-header {
-  background-color: #f5f5f5;
+.header {
+  background: transparent;
   padding: 20px;
 }
 
-header h1 {
-  margin-top: 0;
-}
-
-header nav {
-  float: right;
-}
-
-header nav a {
-  margin-right: 10px;
-}
-
 /* Estilos del menú */
+.header-container {
+  /* -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; */
 
-header {
-  background-color: #f5f5f5;
-  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-header nav {
-  text-align: center;
+.menu-list {
+  display: flex;
+  list-style-type: none; /* Esto quita los puntos de la lista */
+  gap: 20px; /* Esto añade un espacio entre los elementos de la lista */
+}
+.header {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  li {
+    list-style: none;
+    a {
+      position: relative;
+      display: block;
+      text-transform: uppercase;
+      margin: 20px 0;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #ffffff;
+      font-family: sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      transition: .5s;
+      z-index: 1;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        transform: scaleY(2);
+        opacity: 0;
+        transition: .3s;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        transform: scale(0);
+        opacity: 0;
+        transition: .3s;
+        z-index: -1;
+      }
+      &:hover {
+        color: #fff;
+        &:before {
+          transform: scaleY(1);
+          opacity: 1;
+        }
+        &:after {
+          transform: scaleY(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 
-header nav a {
-  margin: 0 10px;
-  font-size: 18px;
-  text-decoration: none;
-  color: #333;
+.container-name {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; Esto hará que el div tome toda la altura de la pantalla */
+  background: transparent;  
+	height:100vh; 
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
 }
 
-header nav a:hover {
-  color: #666;
+.nombre {
+  /* font-size: 60px;
+  -webkit-text-fill-color: transparent; */  
+  color: #fff;
+  background: linear-gradient(to right, white, purple);  
+  cursor:pointer;
+	position:relative;
+	padding:10px 20px;
+  background: transparent;
+	font-size:60px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	transition:all 1s;
+	&:after,&:before{
+		content:" ";
+		width:10px;
+		height:10px;
+		position:absolute;
+		border :0px solid #fff;
+		transition:all 1s;
+		}
+	&:after{
+		top:-1px;
+		left:-1px;
+		border-top:5px solid rgb(255, 255, 255);
+		border-left:5px solid rgb(255, 255, 255);
+	}
+	&:before{
+		bottom:-1px;
+		right:-1px;
+		border-bottom:5px solid rgb(255, 255, 255);
+		border-right:5px solid rgb(255, 255, 255);
+	}
+	&:hover{
+		border-top-right-radius:0px;
+	border-bottom-left-radius:0px;		
+		&:before,&:after{			
+			width:100%;
+			height:100%;			
+		}
+	}
 }
-
 /* Media queries */
 
 @media (max-width: 768px) {
@@ -100,9 +210,6 @@ header nav a:hover {
 
 /* Estilos de las secciones */
 
-section {
-  padding: 20px;
-}
 
 section h2 {
   margin-top: 0;
@@ -110,20 +217,35 @@ section h2 {
 
 /* Estilos de la sección "Acerca de mí" */
 
-#acerca-de-mi {
+.about-me {
   text-align: center;
+  margin-bottom: 20vh;
+  margin-top: 20vh;
+  
 }
 
-/* Estilos de la sección "Habilidades" */
-
-#habilidades ul {
-  list-style: none;
-  padding: 0;
+#acerca-de-mi {
+  padding: 10vh;
+  color: white;
+  
 }
 
-#habilidades ul li {
-  display: inline-block;
-  margin-right: 10px;
+.p-about-me {
+  padding-top: 12vh;
+  padding-left: 20vh;
+  padding-right: 20vh;
+}
+
+/* Estilos de la sección "skills" */
+
+.skills {
+  padding-top: 20vh;
+  padding-bottom: 20vh; 
+}
+
+#languages {
+  padding-bottom: 20vh;
+  color: white;
 }
 
 /* Estilos de la sección "Proyectos" */
@@ -142,42 +264,10 @@ section h2 {
 }
 
 .contacto {
-  background-color: rgb(17, 30, 149);
+  background-color: rgba(17, 30, 149, 0.051);
   padding: 20px;
 }
 
-/* Formulario contacto */
-
-/* Estilos del formulario de contacto */
-
-.contacto form {
-  width: 500px;
-  margin: 0 auto;
-}
-
-.contacto form input,
-.contacto form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-}
-
-.contacto form textarea {
-  height: 100px;
-}
-
-.contacto form button {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  border: 1px solid #000;
-  cursor: pointer;
-}
-
-.contacto form button:hover {
-  background-color: #333;
-}
 
 /* Estilos para las cards */
 
@@ -230,6 +320,38 @@ section h2 {
   background-color: #333;
 }
 
+
+/* Formulario contacto */
+
+.contacto form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.contacto form input,
+.contacto form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.contacto form textarea {
+  height: 100px;
+}
+
+.contacto form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.contacto form button:hover {
+  background-color: #333;
+}
+
 /* Media queries */
 
 @media (max-width: 768px) {
@@ -242,3 +364,227 @@ section h2 {
 .font-white {
   color: #fff;
 }
+
+
+.main {
+  background: url(/src/background-main.svg) no-repeat center center;
+  background-size: cover;
+}
+
+
+
+/* Estilos del footer 
+agregaremos las cards
+validando si funciona 
+
+
+
+*/
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+.card__container {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+  padding-bottom: 30vh;
+  padding-left: 15vh;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 328px;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Naming animations in hover */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  } 
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__img {
+    width: 348px;
+  }
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+
