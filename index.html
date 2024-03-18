@@ -26,7 +26,7 @@
       <div class="about-me">
         <section id="acerca-de-mi">
           <h2 class="titles">About me</h2>
-          
+          <div class="about-me">
             <p class="p-about-me">
               I am passionate about web development and enjoy every stage of the
               process, from the creation of intuitive interfaces to the
@@ -43,82 +43,84 @@
             <article class="card__article">
               <img src="./src/java-v2.svg" alt="image" class="card__img" />
   
-              <div class="card__data">
+      <section id="lenguajes">
+        <h2 class="titles center skills">Skills</h2>
+      
+        <div class="card__container">
+          <article class="card__article">
+             <img src="./src/java-v2.svg" alt="image" class="card__img">
+
+             <div class="card__data">
                 <span class="card__description">Vancouver Mountains, Canada</span>
                 <h2 class="card__title">Java</h2>
-                <a href="#" class="card__button">Read More</a>
-              </div>
-            </article>
-  
-            <article class="card__article">
-              <img src="src/c-sharp.svg" alt="image" class="card__img" />
-  
-              <div class="card__data">
+                <a href="https://docs.oracle.com/en/java/" class="card__button">Read More</a>
+             </div>
+          </article>
+
+          <article class="card__article">
+             <img src="src/c-sharp.svg" alt="image" class="card__img">
+
+             <div class="card__data">
                 <span class="card__description">Poon Hill, Nepal</span>
                 <h2 class="card__title">C#</h2>
-                <a href="#" class="card__button">Read More</a>
-              </div>
-            </article>
-  
-            <article class="card__article">
-              <img src="/src/typescript.svg" alt="image" class="card__img" />
-  
-              <div class="card__data">
+                <a href="https://learn.microsoft.com/es-es/dotnet/csharp/" class="card__button">Read More</a>
+             </div>
+          </article>
+
+          <article class="card__article">
+             <img src="/src/typescript.svg" alt="image" class="card__img">
+
+             <div class="card__data">
                 <span class="card__description">Bojcin Forest, Serbia</span>
                 <h2 class="card__title">Typescript</h2>
-                <a href="#" class="card__button">Read More</a>
-              </div>
-            </article>
-  
-            <article class="card__article">
-              <img src="/src/pytghon-v2.svg" alt="image" class="card__img" />
-  
-              <div class="card__data">
-                <span class="card__description">Bojcin Forest, Serbia</span>
-                <h2 class="card__title">python</h2>
-                <a href="#" class="card__button">Read More</a>
-              </div>
-            </article>
-            <article class="card__article">
-              <img src="/src/php.svg" alt="image" class="card__img" />
-  
-              <div class="card__data">
-                <span class="card__description">Bojcin Forest, Serbia</span>
-                <h2 class="card__title">PHP</h2>
-                <a href="#" class="card__button">Read More</a>
-              </div>
-            </article>
-            <article class="card__article">
-              <img src="/src/node-js.svg" alt="image" class="card__img" />
-  
-              <div class="card__data">
-                <span class="card__description">Bojcin Forest, Serbia</span>
-                <h2 class="card__title">Node js</h2>
-                <a href="#" class="card__button">Read More</a>
-              </div>
-            </article>
+                <a href="https://www.typescriptlang.org/docs/" class="card__button">Read More</a>
+             </div>
+          </article>
+
+          <article class="card__article">
+            <img src="/src/pytghon-v2.svg" alt="image" class="card__img">
+
+            <div class="card__data">
+               <span class="card__description">Bojcin Forest, Serbia</span>
+               <h2 class="card__title">python</h2>
+               <a href="#https://peps.python.org/pep-0257/" class="card__button">Read More</a>
+            </div>
+         </article>
+         <article class="card__article">
+          <img src="/src/php.svg" alt="image" class="card__img">
+
+          <div class="card__data">
+             <span class="card__description">Bojcin Forest, Serbia</span>
+             <h2 class="card__title">PHP</h2>
+             <a href="https://www.php.net/docs.php" class="card__button">Read More</a>
           </div>
-        </section>
-      </div>
-      
-      <div class="contacto">
-        <section id="contact">
-          <h2 class="titles center font-white">Contact</h2>
-          <footer class="contacto">
-            <div class="copy-container">
-              <input type="text" value="rumeles@live.com.mx" class="input" readonly>
-              <button class="copy-button">Copy</button>
-            </div>
-            <div class="copy-container">
-              <input type="text" value="rumeles@live.com.mx" class="input" readonly>
-              <button class="copy-button">Copy</button>
-            </div>
-            <div class="copy-container">
-              <input type="text" value="rumeles@live.com.mx" class="input" readonly>
-              <button class="copy-button">Copy</button>
-            </div>
-          </footer>
-        </section>
-      </div>
+       </article>
+       <article class="card__article">
+        <img src="/src/node-js.svg" alt="image" class="card__img">
+
+        <div class="card__data">
+           <span class="card__description">Bojcin Forest, Serbia</span>
+           <h2 class="card__title">Node js</h2>
+           <a href="https://nodejs.org/docs/latest/api/" class="card__button">Read More</a>
+        </div>
+     </article>
+       </div>
+      </section>
+  
+      <section id="contact" class="contacto font-white">
+        <h2 class="titles center">Contact</h2>
+        <form action="#">
+          <input type="text" name="nombre" placeholder="Nombre" />
+          <input type="email" name="correo" placeholder="Correo electrónico" />
+          <textarea name="mensaje" placeholder="Mensaje"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+  
+      <footer>
+        <p>&copy; 2024 - Portafolio Personal</p>
+      </footer>
+    </div>
+    <script src="scriopt.js"></script>
   </body>
 </html>
