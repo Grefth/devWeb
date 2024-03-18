@@ -11,6 +11,10 @@
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Restablecimiento de estilos */
 
 * {
@@ -23,7 +27,7 @@
 
 body {
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 1.5;
   color: #ffffff;
 }
@@ -234,6 +238,7 @@ section h2 {
   padding-top: 12vh;
   padding-left: 20vh;
   padding-right: 20vh;
+  
 }
 
 /* Estilos de la sección "skills" */
@@ -566,7 +571,7 @@ img {
 @media screen and (min-width: 768px) {
   .card__container {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.5rem;
+    column-gap: 1rem;
   }
 }
 
@@ -580,7 +585,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
   }
   .card__img {
-    width: 348px;
+    width: 200px;
   }
   .card__data {
     width: 316px;
