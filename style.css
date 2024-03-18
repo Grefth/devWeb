@@ -1,3 +1,6 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
 .primary-style {
   color: #000;
   font-size: 16px;
@@ -8,11 +11,9 @@
   align-content: center;
   justify-content: center;
   color: #fff;
-
 }
 
 /* Restablecimiento de estilos */
-
 * {
   margin: 0;
   padding: 0;
@@ -20,12 +21,15 @@
 }
 
 /* Estilos generales */
-
 body {
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -40,6 +44,11 @@ h6 {
 h2 {
   font-size: 2.5rem;  
 }
+
+.titles {
+  font-size: 2.5rem;  
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -49,25 +58,14 @@ a:hover {
   color: #666;
 }
 
-/* Estilos de la cabecera */
-
-.header {
-  background: transparent;
-  padding: 20px;
-}
-
-/* Estilos del menú */
 .header-container {
-  /* -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; */
-
+  background: transparent;
+  position: sticky;
+  top: 0;
   display: flex;
+  width: 100%;
+  z-index: 1000;
   justify-content: space-between;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -79,121 +77,123 @@ a:hover {
   gap: 20px; /* Esto añade un espacio entre los elementos de la lista */
 }
 .header {
-  position: absolute;
-  top: 10%;
+  position: sticky;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   display: flex;
-  li {
-    list-style: none;
-    a {
-      position: relative;
-      display: block;
-      text-transform: uppercase;
-      margin: 20px 0;
-      padding: 10px 20px;
-      text-decoration: none;
-      color: #ffffff;
-      font-family: sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      transition: .5s;
-      z-index: 1;
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-top: 2px solid #ffffff;
-        border-bottom: 2px solid #ffffff;
-        transform: scaleY(2);
-        opacity: 0;
-        transition: .3s;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        top: 2px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        
-        transform: scale(0);
-        opacity: 0;
-        transition: .3s;
-        z-index: -1;
-      }
-      &:hover {
-        color: #fff;
-        &:before {
-          transform: scaleY(1);
-          opacity: 1;
-        }
-        &:after {
-          transform: scaleY(1);
-          opacity: 1;
-        }
-      }
-    }
-  }
+  z-index: 1000;
 }
 
-.container-name {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh; Esto hará que el div tome toda la altura de la pantalla */
+.header li {
+  list-style: none;
+}
+
+.header li a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  transition: .5s;
+  z-index: 1;
+}
+
+.header li a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: .3s;
+}
+
+.header li a:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  opacity: 0;
+  transition: .3s;
+  z-index: -1;
+}
+
+.header li a:hover {
+  color: #fff;
+}
+
+.header li a:hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.header li a:hover:after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.container-name {  
   background: transparent;  
-	height:100vh; 
+	height:80vh; 
 	display:flex;
 	justify-content:center;
 	align-items:center;
-
 }
 
 .nombre {
-  /* font-size: 60px;
-  -webkit-text-fill-color: transparent; */  
   color: #fff;
-  background: linear-gradient(to right, white, purple);  
+  font-size:60px;
   cursor:pointer;
-	position:relative;
-	padding:10px 20px;
+  transition:all 1s;
+}
+
+.efecto-texto {
+  position:relative;
+  padding:10px 20px;
   background: transparent;
-	font-size:60px;
-	border-top-right-radius:10px;
-	border-bottom-left-radius:10px;
-	transition:all 1s;
-	&:after,&:before{
-		content:" ";
-		width:10px;
-		height:10px;
-		position:absolute;
-		border :0px solid #fff;
-		transition:all 1s;
-		}
-	&:after{
-		top:-1px;
-		left:-1px;
-		border-top:5px solid rgb(255, 255, 255);
-		border-left:5px solid rgb(255, 255, 255);
-	}
-	&:before{
-		bottom:-1px;
-		right:-1px;
-		border-bottom:5px solid rgb(255, 255, 255);
-		border-right:5px solid rgb(255, 255, 255);
-	}
-	&:hover{
-		border-top-right-radius:0px;
-	border-bottom-left-radius:0px;		
-		&:before,&:after{			
-			width:100%;
-			height:100%;			
-		}
-	}
+  border-top-right-radius:10px;
+  border-bottom-left-radius:10px;
+  &:after,&:before{
+    content:" ";
+    width:10px;
+    height:10px;
+    position:absolute;
+    border :0px solid rgb(255, 255, 255);
+    transition:all 1s;
+  }
+  &:after{
+    top:-1px;
+    left:-1px;
+    border-top:5px solid rgb(255, 255, 255);
+    border-left:5px solid rgb(255, 255, 255);
+  }
+  &:before{
+    bottom:-1px;
+    right:-1px;
+    border-bottom:5px solid rgb(255, 255, 255);
+    border-right:5px solid rgb(255, 255, 255);
+  }
+  &:hover{
+    border-top-right-radius:0px;
+    border-bottom-left-radius:0px;    
+    &:before,&:after{      
+      width:100%;
+      height:100%;      
+    }
+  }
 }
 /* Media queries */
 
@@ -211,17 +211,11 @@ a:hover {
 /* Estilos de las secciones */
 
 
-section h2 {
-  margin-top: 0;
-}
 
 /* Estilos de la sección "Acerca de mí" */
 
 .about-me {
   text-align: center;
-  margin-bottom: 20vh;
-  margin-top: 20vh;
-  
 }
 
 #acerca-de-mi {
@@ -231,9 +225,8 @@ section h2 {
 }
 
 .p-about-me {
-  padding-top: 12vh;
-  padding-left: 20vh;
-  padding-right: 20vh;
+  margin-top: 40vh;
+  margin-bottom: 20vh;
 }
 
 /* Estilos de la sección "skills" */
@@ -248,26 +241,23 @@ section h2 {
   color: white;
 }
 
-/* Estilos de la sección "Proyectos" */
-
-#proyectos ul {
-  list-style: none;
-  padding: 0;
-}
-
-#proyectos ul li {
-  margin-bottom: 10px;
-}
-
-#proyectos ul li a {
-  font-weight: bold;
-}
-
 .contacto {
-  background-color: rgba(17, 30, 149, 0.051);
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+
+.input{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:15px;
+	display:block;
+	color:#fff;
+	background-color:#751ba2;
+} 
 
 /* Estilos para las cards */
 
@@ -320,38 +310,6 @@ section h2 {
   background-color: #333;
 }
 
-
-/* Formulario contacto */
-
-.contacto form {
-  width: 500px;
-  margin: 0 auto;
-}
-
-.contacto form input,
-.contacto form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-}
-
-.contacto form textarea {
-  height: 100px;
-}
-
-.contacto form button {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 20px;
-  border: 1px solid #000;
-  cursor: pointer;
-}
-
-.contacto form button:hover {
-  background-color: #333;
-}
-
 /* Media queries */
 
 @media (max-width: 768px) {
@@ -381,8 +339,7 @@ validando si funciona
 
 */
 
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
 
 /*=============== VARIABLES CSS ===============*/
 .card__container {
@@ -431,7 +388,7 @@ img {
 }
 
 /*=============== CARD ===============*/
-.container {
+.skills {
   display: grid;
   place-items: center;
   margin-inline: 1.5rem;
@@ -449,7 +406,7 @@ img {
 }
 
 .card__img {
-  width: 328px;
+  width: 245px;
   border-radius: 1.5rem;
 }
 
@@ -552,13 +509,13 @@ img {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 340px) {
-  .container {
+  .skills {
     margin-inline: 1rem;
   }
 
   .card__data {
     width: 250px;
-    padding: 1rem;
+    padding: 2.5rem;
   }
 }
 
@@ -572,18 +529,16 @@ img {
 
 /* For large devices */
 @media screen and (min-width: 1120px) {
-  .container {
-    height: 100vh;
-  }
+  
 
   .card__container {
     grid-template-columns: repeat(3, 1fr);
   }
   .card__img {
-    width: 348px;
+    width: 244px;
   }
   .card__data {
-    width: 316px;
+    width: 250px;
     padding-inline: 2.5rem;
   }
 }

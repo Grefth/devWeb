@@ -1,140 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c2a8b21ada.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
   </head>
   <body>
     <div class="main">
-      <div class="header-container">      
+      <div class="header-container">
         <header class="header">
           <ul class="menu-list">
             <li><a href="#acerca-de-mi">home</a></li>
-            <li><a href="#acerca-de-mi">About me</a></li>            
-            <li><a href="#lenguajes">skills</a></li>
+            <li><a href="#acerca-de-mi">About me</a></li>
+            <li><a href="#skills">skills</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>                
+          </ul>
         </header>
       </div>
       <div class="container-name">
-        <h1 class="nombre">Ruben Gonzalez M.</h1>
+        <h1 class="nombre efecto-texto">Ruben Gonzalez M.</h1>
       </div>
       <div class="about-me">
         <section id="acerca-de-mi">
-          <h2>About me</h2>
-          <div class="about-me">
+          <h2 class="titles">About me</h2>
+          
             <p class="p-about-me">
-              I am passionate about web development and enjoy every stage of the process,
-               from the creation of intuitive interfaces to the management of databases
-               data. I love learning new things and I'm always looking for new ones
-               challenges to improve my skills.
+              I am passionate about web development and enjoy every stage of the
+              process, from the creation of intuitive interfaces to the
+              management of databases data. I love learning new things and I'm
+              always looking for new ones challenges to improve my skills.
             </p>
-          </div>
+          
         </section>
-
       </div>
-      
+      <div class="skill">
+        <section id="skills">
+          <h2 class="titles center skills">Skills</h2>
+          <div class="card__container">
+            <article class="card__article">
+              <img src="./src/java-v2.svg" alt="image" class="card__img" />
   
-      <section id="lenguajes">
-        <h2 class="center skills">Skills</h2>
-        <!-- <ul class="cards">
-          <li class="card">
-            <img src="src/python-logo.png" alt="Imagen del proyecto 1" />
-            <h3>Título del proyecto 1</h3>
-            <p>Descripción del proyecto 1</p>
-            <a href="#">Ver más</a>
-          </li>
-          <li class="card">
-            <img src="src/javascript-logo.png" alt="Imagen del proyecto 2" />
-            <h3>Título del proyecto 2</h3>
-            <p>Descripción del proyecto 2</p>
-            <a href="#">Ver más</a>
-          </li>
-          <li class="card">
-            <img src="src/logo-java.png" alt="Imagen del proyecto 3" />
-            <h3>Título del proyecto 3</h3>
-            <p>Descripción del proyecto 3</p>
-            <a href="#">Ver más</a>
-          </li>
-        </ul> -->
-
-
-        <div class="card__container">
-          <article class="card__article">
-             <img src="./src/java-v2.svg" alt="image" class="card__img">
-
-             <div class="card__data">
+              <div class="card__data">
                 <span class="card__description">Vancouver Mountains, Canada</span>
                 <h2 class="card__title">Java</h2>
                 <a href="#" class="card__button">Read More</a>
-             </div>
-          </article>
-
-          <article class="card__article">
-             <img src="src/c-sharp.svg" alt="image" class="card__img">
-
-             <div class="card__data">
+              </div>
+            </article>
+  
+            <article class="card__article">
+              <img src="src/c-sharp.svg" alt="image" class="card__img" />
+  
+              <div class="card__data">
                 <span class="card__description">Poon Hill, Nepal</span>
                 <h2 class="card__title">C#</h2>
                 <a href="#" class="card__button">Read More</a>
-             </div>
-          </article>
-
-          <article class="card__article">
-             <img src="/src/typescript.svg" alt="image" class="card__img">
-
-             <div class="card__data">
+              </div>
+            </article>
+  
+            <article class="card__article">
+              <img src="/src/typescript.svg" alt="image" class="card__img" />
+  
+              <div class="card__data">
                 <span class="card__description">Bojcin Forest, Serbia</span>
                 <h2 class="card__title">Typescript</h2>
                 <a href="#" class="card__button">Read More</a>
-             </div>
-          </article>
-
-          <article class="card__article">
-            <img src="/src/pytghon-v2.svg" alt="image" class="card__img">
-
-            <div class="card__data">
-               <span class="card__description">Bojcin Forest, Serbia</span>
-               <h2 class="card__title">python</h2>
-               <a href="#" class="card__button">Read More</a>
-            </div>
-         </article>
-         <article class="card__article">
-          <img src="/src/php.svg" alt="image" class="card__img">
-
-          <div class="card__data">
-             <span class="card__description">Bojcin Forest, Serbia</span>
-             <h2 class="card__title">PHP</h2>
-             <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
+  
+            <article class="card__article">
+              <img src="/src/pytghon-v2.svg" alt="image" class="card__img" />
+  
+              <div class="card__data">
+                <span class="card__description">Bojcin Forest, Serbia</span>
+                <h2 class="card__title">python</h2>
+                <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
+            <article class="card__article">
+              <img src="/src/php.svg" alt="image" class="card__img" />
+  
+              <div class="card__data">
+                <span class="card__description">Bojcin Forest, Serbia</span>
+                <h2 class="card__title">PHP</h2>
+                <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
+            <article class="card__article">
+              <img src="/src/node-js.svg" alt="image" class="card__img" />
+  
+              <div class="card__data">
+                <span class="card__description">Bojcin Forest, Serbia</span>
+                <h2 class="card__title">Node js</h2>
+                <a href="#" class="card__button">Read More</a>
+              </div>
+            </article>
           </div>
-       </article>
-       <article class="card__article">
-        <img src="/src/node-js.svg" alt="image" class="card__img">
-
-        <div class="card__data">
-           <span class="card__description">Bojcin Forest, Serbia</span>
-           <h2 class="card__title">Node js</h2>
-           <a href="#" class="card__button">Read More</a>
-        </div>
-     </article>
-       </div>
-      </section>
-  
-      <section id="contact" class="contacto font-white">
-        <h2 class="center">Contact</h2>
-        <form action="#">
-          <input type="text" name="nombre" placeholder="Nombre" />
-          <input type="email" name="correo" placeholder="Correo electrónico" />
-          <textarea name="mensaje" placeholder="Mensaje"></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-  
-      <footer>
-        <p>&copy; 2024 - Portafolio Personal</p>
-      </footer>
-    </div>
+        </section>
+      </div>
+      
+      <div class="contacto">
+        <section id="contact">
+          <h2 class="titles center font-white">Contact</h2>
+          <footer class="contacto">
+            <div class="copy-container">
+              <input type="text" value="rumeles@live.com.mx" class="input" readonly>
+              <button class="copy-button">Copy</button>
+            </div>
+            <div class="copy-container">
+              <input type="text" value="rumeles@live.com.mx" class="input" readonly>
+              <button class="copy-button">Copy</button>
+            </div>
+            <div class="copy-container">
+              <input type="text" value="rumeles@live.com.mx" class="input" readonly>
+              <button class="copy-button">Copy</button>
+            </div>
+          </footer>
+        </section>
+      </div>
   </body>
 </html>
