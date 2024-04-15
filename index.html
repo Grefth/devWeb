@@ -5,51 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>personal Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/c2a8b21ada.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />    
+    <script src="https://kit.fontawesome.com/c2a8b21ada.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
   <body>
     <div class="main">
       <div class="header-container">
         <header class="header">
           <ul class="menu-list">
-            <li><a href="#acerca-de-mi">home</a></li>
+            <li><a href="#">home</a></li>
             <li><a href="#acerca-de-mi">About me</a></li>
             <li><a href="#skills">skills</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </header>
       </div>
-      <div class="container-name">
-        <h1 class="nombre efecto-texto">Ruben Gonzalez M.</h1>
+      <div class="container-name section-fade-in">
+        <h1 class="nombre efecto-texto section-fade-in">Ruben Gonzalez M.</h1>        
       </div>
-      <div class="about-me">
+      <div class="about-me section-fade-in">
         <section id="acerca-de-mi">
-          <h2 class="titles">About me</h2>
-          <div class="about-me">
+          <h2 class="titles section-fade-in">About me</h2>
             <p class="p-about-me">
               I am passionate about web development and enjoy every stage of the
               process, from the creation of intuitive interfaces to the
               management of databases data. I love learning new things and I'm
               always looking for new ones challenges to improve my skills.
-            </p>
-          
+            </p>                              
         </section>
       </div>
       <div class="skill">
         <section id="skills">
           <h2 class="titles center skills">Skills</h2>
+
+          <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
           <div class="card__container">
             <article class="card__article">
               <img src="./src/java-v2.svg" alt="image" class="card__img" />
-  
-      <section id="lenguajes">
-        <h2 class="titles center skills">Skills</h2>
-      
-        <div class="card__container">
-          <article class="card__article">
-             <img src="./src/java-v2.svg" alt="image" class="card__img">
-
              <div class="card__data">
                 <span class="card__description">Vancouver Mountains, Canada</span>
                 <h2 class="card__title">Java</h2>
@@ -108,19 +125,40 @@
       </section>
   
       <section id="contact" class="contacto font-white">
-        <h2 class="titles center">Contact</h2>
-        <form action="#">
-          <input type="text" name="nombre" placeholder="Nombre" />
-          <input type="email" name="correo" placeholder="Correo electrónico" />
-          <textarea name="mensaje" placeholder="Mensaje"></textarea>
-          <button type="submit">Enviar</button>
-        </form>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="titles center">Contact</h2>
+            </div>
+          </div>
+          <div class="row pt-5">
+            <div class="col"></div>
+            <div class="col-5">
+              <div class="input-group mb-3">
+                <i class="fa-brands fa-github fa-2x icons-contact"></i>
+                <input type="text" class="form-control" placeholder="@Grefth" aria-label="@Grefth" aria-describedby="basic-addon1" readonly>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Go</button>
+              </div>
+              <div class="input-group mb-3">
+                <i class="fa-regular fa-envelope fa-2x icons-contact"></i>
+                <input type="text" class="form-control" placeholder="rumeles@live.com.mx" aria-label="rumeles@live.com.mx" aria-describedby="basic-addon1" readonly>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Cp</button>
+              </div>
+              <div class="input-group mb-3">
+                <i class="fa-brands fa-linkedin fa-2x icons-contact"></i>
+                <input type="text" class="form-control" placeholder="rumeles@live.com.mx" aria-label="rumeles@live.com.mx" aria-describedby="basic-addon1" readonly>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Go</button>
+              </div>
+            </div>
+            <div class="col"></div>
+          </div>
+        </div>
       </section>
-  
-      <footer>
-        <p>&copy; 2024 - Portafolio Personal</p>
+      <footer>            
       </footer>
-    </div>
-    <script src="scriopt.js"></script>
+    </div> 
+    <script src="https://kit.fontawesome.com/c2a8b21ada.js" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+    <script src="app.js"></script>
   </body>
 </html>
